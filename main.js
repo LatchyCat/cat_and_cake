@@ -20,6 +20,10 @@ function createWindow() {
     });
 };
 
+//Opens Dev tools in browser window when app is open
+win.webContents.openDevTools();
+
+
 app.on('ready', createWindow);
 
 //This is for mac users
