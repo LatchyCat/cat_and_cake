@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat and Cake</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cat and Cake 🐱🎂</h1>
+    <div class="topNav">
+        <h1>Cat and Cake 🐱🎂</h1>
+    </div>
+
+    <div class="middleNav">
+        <!-- This is where the cat pictures will spawn -->
+        <div class="upperBody">
+            <div class="catPic">
+                <img src="cat-eats-cake.png" alt="cat pictures" id="catImage">
+            </div>
+        </div>
+
+        <!-- This will be a button to rotate new cat pictures -->
+        <div class="lowerBody">
+            <button class="btn" id="newCatBtn" type="button">New Cat</button>
+        </div>
+    </div>
+
+    <!-- random info like social media maybe -->
+    <div class="bottomNav"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>

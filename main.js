@@ -18,16 +18,15 @@ function createWindow() {
     win.on('closed', () => {
         win = null;
     });
-};
 
-//Opens Dev tools in browser window when app is open
-win.webContents.openDevTools();
-
+    // Open Dev tools in the browser window when the app is open
+    win.webContents.openDevTools();
+}
 
 app.on('ready', createWindow);
 
-//This is for mac users
-//If the platform is not equal to mac OS 'darwin' then close app (When clicking x to close)
+// This is for mac users
+// If the platform is not equal to macOS 'darwin' then close app (When clicking x to close)
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();
@@ -36,6 +35,6 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
     if (win === null) {
-        createWindow;
+        createWindow();
     }
 });
